@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+</head>
+<body>
+    <h1>Enter Input</h1>
+    {% from "formhelpers.html" import render_field %}
+    <form method = post action="/results"></form>
+    <dl>
+        {{render_field(form.inputvalue)}}
+    </dl>
+    <div>
+        <input type = submit value = 'Submit' name = 'submit_btn'>
+    </div>
+</body>
+</html>
